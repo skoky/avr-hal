@@ -55,4 +55,5 @@ printf "\n"
 printf "Attempting to flash ...\n"
 printf "\n"
 
-avrdude -q  -patmega328p -carduino -P"${SERIAL_PORT}" -D "-Uflash:w:$1:e"
+#avrdude -q  -patmega328p -carduino -P"${SERIAL_PORT}" -D "-Uflash:w:$1:e"
+avrdude -patmega328p -c usbasp "-Uflash:w:$1:e"
